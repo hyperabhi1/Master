@@ -1,0 +1,17 @@
+c:\users\l-52\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbprojResolveAssemblyReference.cache
+c:\users\l-52\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.Form2.resources
+c:\users\l-52\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.Resources.resources
+c:\users\l-52\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbproj.GenerateResource.cache
+c:\users\l-52\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbproj.CoreCompileInputs.cache
+c:\users\l-52\source\repos\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.exe.config
+c:\users\l-52\source\repos\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.exe
+c:\users\l-52\source\repos\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.pdb
+c:\users\l-52\source\repos\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.xml
+c:\users\l-52\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.exe
+c:\users\l-52\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.xml
+c:\users\l-52\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.pdb
+C:\Users\L-52\source\repos\WindowsApp1\WindowsApp1\bin\Debug\CommonDLL.dll
+C:\Users\L-52\source\repos\WindowsApp1\WindowsApp1\bin\Debug\CommonDLL.pdb
+C:\Users\L-52\source\repos\WindowsApp1\WindowsApp1\bin\Debug\CommonDLL.xml
+C:\Users\L-52\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.Document1.resources
+C:\Users\L-52\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbproj.CopyComplete

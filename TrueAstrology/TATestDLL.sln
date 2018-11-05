@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "TATestDLL", "TATestDLL\TATestDLL.vbproj", "{F032C4C9-96E2-4F40-89F2-539B9E176F69}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F032C4C9-96E2-4F40-89F2-539B9E176F69}.Debug|x86.ActiveCfg = Debug|x86
+		{F032C4C9-96E2-4F40-89F2-539B9E176F69}.Debug|x86.Build.0 = Debug|x86
+		{F032C4C9-96E2-4F40-89F2-539B9E176F69}.Release|x86.ActiveCfg = Release|x86
+		{F032C4C9-96E2-4F40-89F2-539B9E176F69}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
