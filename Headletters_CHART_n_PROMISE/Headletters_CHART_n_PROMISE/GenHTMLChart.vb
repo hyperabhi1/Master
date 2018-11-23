@@ -1,5 +1,6 @@
-﻿Imports System.Data.SqlClient
-Imports System.Text
+﻿Imports System.Text
+Imports CommonDLL
+
 Public Class GenHTMLChart
     Dim dt = DateTime.Now.ToString()
     Sub GenHTMLChartMain(ByRef HID As String, ByRef UID As String, ByRef P_List As String(), ByRef H_List As String(), ByRef BirthLagna As String(,), ByRef BirthBhav As String(,), ByRef BirthSouth As String(), ByRef DasaListP As DataTable, ByRef personalDetails As PersonalDetails)
@@ -8,17 +9,17 @@ Public Class GenHTMLChart
         Dim fPath1 = "C:\Astro\Templates\" + HIDUIDDateTime + "_Dasha.html"
         Dim fPath2 = "C:\Astro\Templates\" + HIDUIDDateTime + ".html"
         Dim fPath3 = "C:\Astro\Templates\" + HIDUIDDateTime + ".pdf"
-        If System.IO.File.Exists(fPath0) = True Then
-            System.IO.File.Delete(fPath0)
+        If IO.File.Exists(fPath0) = True Then
+            IO.File.Delete(fPath0)
         End If
-        If System.IO.File.Exists(fPath1) = True Then
-            System.IO.File.Delete(fPath1)
+        If IO.File.Exists(fPath1) = True Then
+            IO.File.Delete(fPath1)
         End If
-        If System.IO.File.Exists(fPath2) = True Then
-            System.IO.File.Delete(fPath2)
+        If IO.File.Exists(fPath2) = True Then
+            IO.File.Delete(fPath2)
         End If
-        If System.IO.File.Exists(fPath3) = True Then
-            System.IO.File.Delete(fPath3)
+        If IO.File.Exists(fPath3) = True Then
+            IO.File.Delete(fPath3)
         End If
         Dim afile0 As New IO.StreamWriter(fPath0, True)
         Dim afile1 As New IO.StreamWriter(fPath1, True)
@@ -33,7 +34,7 @@ Public Class GenHTMLChart
         afile1.Close()
         afile2.Close()
         RunCommandCom(HIDUIDDateTime)
-        UpdateLink(HIDUIDDateTime, HID, UID)
+        DBController.UpdateChartLink(HIDUIDDateTime, HID, UID)
     End Sub
 
     Function DashaStringBuilder(ByRef DasaListP As DataTable, ByRef personalDetails As PersonalDetails) As String
@@ -967,7 +968,7 @@ Public Class GenHTMLChart
         htmlBuilder.Append(vbCrLf + "                    </tr>")
         htmlBuilder.Append(vbCrLf + "                    <tr>")
         htmlBuilder.Append(vbCrLf + "                        <td>")
-        htmlBuilder.Append(vbCrLf + "                            <p style=' margin: 5px 0;color: #33334B;font-family: sans-serif;font-weight: 600;font-size: 15px;'>Time of Birth :</p>")
+        htmlBuilder.Append(vbCrLf + "                            <p style=' margin: 5px 0;color: #33334B;font-family: sans-serif;font-weight: 600;font-size: 15px;'>Time of Birth (24 Hours):</p>")
         htmlBuilder.Append(vbCrLf + "                        </td>")
         htmlBuilder.Append(vbCrLf + "                        <td>")
         htmlBuilder.Append(vbCrLf + "                            <p style='margin: 5px 0;color: #33334B;font-family: sans-serif;font-weight: 600;font-size: 14px;'>" + personalDetails.TimeofBirth + "</p>")
@@ -1379,16 +1380,5 @@ Public Class GenHTMLChart
         p.StartInfo = pi
         p.Start()
     End Sub
-    Sub UpdateLink(ByRef linkCode As String, ByRef HID As String, ByRef UID As String)
-        Dim con As New SqlConnection
-        Dim cmd As New SqlCommand
-        con.ConnectionString = Constr
-        con.Open()
-        cmd.Connection = con
-        cmd.CommandText = $"UPDATE ASTROLOGYSOFTWARE_DB.DBO.HMAIN
-                                SET HPDF = 'http://49.50.103.132/letterhead/templates/" + linkCode + "_Chart.html' 
-                                WHERE HUSERID = '" + UID + "' AND HID = '" + HID + "'"
-        cmd.ExecuteNonQuery()
-        con.Close()
-    End Sub
+
 End Class
